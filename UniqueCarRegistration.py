@@ -11,7 +11,7 @@ class UniqueCarRegistration:
 
     def generate(self):
         print(
-            "Choose your province by number: \n 1 for Gauteng\n 2 for North West\n3 for Free State\n 4 for Mpumalanga\n5 for Norther Cape\n6 for Eastern Cape\n7 for KwaZulu Natal\n8 for Western Cape\n9 for Limpopo"
+            "Choose your province by number: \n 1 for Gauteng\n 2 for North West\n3 for Free State\n 4 for Mpumalanga\n5 for Norther Cape\n6 for Eastern Cape\n7 for KwaZulu Natal\n8 for Western Cape\n9 for Limpopo\n"
         )
         choice_prov = input()
         prov = ""
@@ -53,6 +53,5 @@ class UniqueCarRegistration:
                 return candidate_reg
 
 
-gen = UniqueCarRegistration()
-for _ in range(5):
-    print(gen.generate())
+car_reg = UniqueCarRegistration()
+car_reg.generate()
