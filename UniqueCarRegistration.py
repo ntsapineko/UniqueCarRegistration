@@ -23,23 +23,21 @@ class UniqueCarRegistration:
             sep = random.choice([" ", "-"])
 
             if random.choice([True, False]):
-                two_part1 = "".join(random.choices(string.ascii_uppercase, k=2))
-                two_part2 = "".join(random.choices(string.digits, k=2))
-                two_part3 = "".join(random.choices(string.ascii_uppercase, k=2))
-                candidate_reg = (
-                    f"{two_part1}{sep}{two_part2}{sep}{two_part3}{sep}{prov}"
-                )
+                part1 = "".join(random.choices(string.ascii_uppercase, k=2))
+                part2 = "".join(random.choices(string.digits, k=2))
+                part3 = "".join(random.choices(string.ascii_uppercase, k=2))
+                candidate_reg = f"{part1}{sep}{part2}{sep}{part3}{sep}{prov}"
 
             else:
-                three_part1 = "".join(random.choices(string.ascii_uppercase, k=3))
-                three_part2 = "".join(random.choices(string.digits, k=3))
-                candidate_reg = f"{three_part1}{sep}{three_part2}{sep}{prov}"
+                part1 = "".join(random.choices(string.ascii_uppercase, k=3))
+                part2 = "".join(random.choices(string.digits, k=3))
+                candidate_reg = f"{part1}{sep}{part2}{sep}{prov}"
 
             if candidate_reg not in self.used:
                 self.used.append(candidate_reg)
                 break
 
-        print(candidate_reg)
+        print("Your car registration is: " + candidate_reg)
 
 
 if __name__ == "__main__":
